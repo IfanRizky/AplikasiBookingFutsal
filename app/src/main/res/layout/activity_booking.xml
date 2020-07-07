@@ -1,9 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Booking">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewjudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Semar Futsal"
+            android:textAlignment="center"
+            android:textColor="@color/txt"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/txt"
+            android:layout_marginRight="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputNamaPemesan"
+                        android:textColor="@color/txt"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/textbox3"
+                        android:inputType="textPersonName">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputPilihTanggal"
+                        android:textColor="@color/txt"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/textbox4"
+                        android:inputType="date">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputUangMuka"
+                        android:textColor="@color/txt"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/textbox5"
+                        android:inputType="text">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/txt"
+            android:layout_marginRight="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textPilihWaktu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:hint="@string/text3"
+                    android:textColor="@color/txt"
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/textPilihTipeLapangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="95dp"
+                    android:hint="@string/text4"
+                    android:textColor="@color/txt"
+                    android:textSize="17dp">
+                </TextView>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/txt"
+            android:layout_marginTop="10dp">
+            <TableRow>
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textColor="@color/txt"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="5dp">
+                    <RadioButton
+                        android:id="@+id/radioPagi"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txt"
+                        android:text="Pagi">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioSiang"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/txt"
+                        android:text="Siang">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioSore"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/txt"
+                        android:text="Sore">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioMalam"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/txt"
+                        android:text="Malam">
+                    </RadioButton>
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="60dp"
+                    android:textColor="@color/txt"
+                    android:layout_marginTop="13dp">
+                    <RadioButton
+                        android:id="@+id/radioVinyl"
+                        android:layout_width="105dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/txt"
+                        android:text="Vinyl"
+                        android:layout_marginRight="110dp">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioParquette"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/txt"
+                        android:text="Parquette"
+                        android:layout_marginRight="90dp">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/radioRumput"
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/txt"
+                        android:text="Rumput"
+                        android:layout_marginRight="90dp">
+                    </RadioButton>
+                </RadioGroup>
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textPilihJam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:hint="@string/text5"
+            android:textColor="@color/txt"
+            android:textSize="17dp">
+        </TextView>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/txt"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputMulai"
+                        android:textColor="@color/txt"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/textbox6"
+                        android:inputType="text">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputSampai"
+                        android:textColor="@color/txt"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/textbox7"
+                        android:inputType="text">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="7dp">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnKembali"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kembali"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="15dp"
+                    android:textColor="@color/txt2"
+                    android:layout_marginBottom="7dp"></Button>
+
+                <Button
+                    android:id="@+id/btnPesan"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="190dp"
+                    android:layout_marginLeft="1dp"
+                    android:text="Pesan"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="15dp"
+                    android:textColor="@color/txt2"
+                    android:layout_marginBottom="7dp"></Button>
+            </TableRow>
+        </TableLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_nav_user"
+            app:itemBackground="@color/txt2"
+            app:itemTextColor="@drawable/selector"
+            app:itemIconTint="@drawable/selector"
+            android:textColor="@color/txt"
+            app:menu="@menu/menu_botnavbar_user"
+            android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+
+</ScrollView>
