@@ -41,4 +41,8 @@
     <string name="invalid_pass_user">Nama Password : user</string>
     <string name="invalid_admin">Nama Username : admin</string>
     <string name="invalid_pass_admin">Nama Password : admin</string>
+    <string name="invalid_name">Mohon diisi dahulu</string>
+    <string name="invalid_uang">Mohon diisi dahulu</string>
+    <string name="invalid_mulai">Mohon diisi dahulu</string>
+    <string name="invalid_sampai">Mohon diisi dahulu</string>
 </resources>
