@@ -1,18 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.aplikasibookingfutsal.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="267dp"
+        android:layout_height="228dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="70dp"
+        app:srcCompat="@drawable/fix"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="120dp"
+            app:srcCompat="@drawable/ic_person_black_24dp"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="303dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="156dp"
+            android:layout_height="24dp"
+            android:paddingLeft="10dp"
+            android:text="LOGIN USER"
+            android:textColor="@color/txt"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="303dp" />
+    </TableRow>
 
     <TextView
+        android:id="@+id/username_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingTop="30dp"
+        android:paddingLeft="95dp"
+        android:text="Username"
+        android:textColor="@color/txt"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="372dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="90dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editUser"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Username"
+                android:inputType="text">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/password_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/txt"
+        android:textSize="15dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="95dp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="90dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPass_user"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Password"
+                android:inputType="textPassword">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingLeft="130dp">
+
+        <Button
+            android:id="@+id/btn_sign_user"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:text="SIGN IN"
+            android:background="@drawable/rounded_button"
+            android:textSize="15dp"
+            android:textColor="@color/txt2"/>
+    </TableRow>
+
+</LinearLayout>
