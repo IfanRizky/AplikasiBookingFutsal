@@ -1,9 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PaymentUser">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/txt"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewjudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Semar Futsal"
+            android:textAlignment="center"
+            android:textColor="@color/txt"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textInputNamaPemesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="30dp"
+            android:hint="@string/text14"
+            android:textColor="@color/txt"
+            android:textSize="17dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textInputTanggalPesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="30dp"
+            android:hint="@string/text15"
+            android:textColor="@color/txt"
+            android:textSize="17dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textInputUangMuka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="30dp"
+            android:hint="@string/text16"
+            android:textColor="@color/txt"
+            android:textSize="17dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textInputPilihanWaktu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="30dp"
+            android:hint="@string/text17"
+            android:textColor="@color/txt"
+            android:textSize="17dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textInputPukul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="30dp"
+            android:hint="@string/text18"
+            android:textColor="@color/txt"
+            android:textSize="17dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textInputPilihanLapangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="30dp"
+            android:hint="@string/text19"
+            android:textColor="@color/txt"
+            android:textSize="17dp">
+        </TextView>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="7dp">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnKembali"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kembali"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="15dp"
+                    android:textColor="@color/txt2"
+                    android:layout_marginBottom="7dp"></Button>
+
+                <Button
+                    android:id="@+id/btnBayar"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="190dp"
+                    android:layout_marginLeft="1dp"
+                    android:text="bayar"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="15dp"
+                    android:textColor="@color/txt2"
+                    android:layout_marginBottom="7dp"></Button>
+            </TableRow>
+        </TableLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_nav_user"
+            app:itemBackground="@color/txt2"
+            app:itemTextColor="@drawable/selector"
+            app:itemIconTint="@drawable/selector"
+            android:textColor="@color/txt"
+            app:menu="@menu/menu_botnavbar_user"
+            android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+
+</ScrollView>
