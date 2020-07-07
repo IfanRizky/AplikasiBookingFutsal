@@ -37,4 +37,6 @@
     <string name="textbox10">Silahkan isikan tipe lapangan :</string>
     <string name="textbox11">Masukkan foto :</string>
     <string name="editUser">Mohon diisi dahulu</string>
+    <string name="invalid_username">Nama username : user</string>
+    <string name="invalid_pass_user">Nama Password : user</string>
 </resources>
